@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberpunk LifeOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                black: '#000000',
+                dark: '#121212',   /* Material Dark Background */
+                gray: '#2a2a2a',   /* Brighter panels */
+                neon: '#00ff41',
+                dim: '#4d4d4d',    /* Much brighter grey for borders */
+                alert: '#ff1a53',  /* Brighter red */
+                glass: '#1a1a1a'   /* Solid dark gray instead of transparent */
+              }
+            },
+            fontFamily: {
+              mono: ['"Fira Code"', 'monospace'],
+              display: ['"Orbitron"', 'sans-serif'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glitch': 'glitch 1s linear infinite',
+            },
+            boxShadow: {
+              'neon': '0 0 10px rgba(0, 255, 65, 0.6), 0 0 20px rgba(0, 255, 65, 0.3)',
+              'neon-box': 'inset 0 0 2px #00ff41',
+              'glow-text': '0 0 2px rgba(255, 255, 255, 0.8)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #111;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border: 1px solid #00ff41;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00ff41;
+      }
+      .grid-bg {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, #222 1px, transparent 1px),
+                          linear-gradient(to bottom, #222 1px, transparent 1px);
+        opacity: 0.5;
+      }
+      input::placeholder {
+        color: #888 !important;
+        opacity: 1;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "uuid": "https://esm.sh/uuid@^13.0.0",
+    "date-fns": "https://esm.sh/date-fns@^4.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
